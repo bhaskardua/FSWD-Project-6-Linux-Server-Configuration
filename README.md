@@ -33,6 +33,8 @@ python-psycopg2
     - `sudo apt-get update`: Update the package source lists
     - `sudo apt-get upgrade`: Upgrade the installed packages
     - `sudo apt-get autoremove`: Remove packages no longer needed
+    - `sudo apt-get install unattended-upgrades`: Install auto updates
+    - `sudo dpkg-reconfigure --priority=low unattended-upgrades`: Configure auto updates
 3. Configure the local timezone to UTC. No change required. Machine already on UTC+0
 ```
     $date
@@ -69,7 +71,8 @@ python-psycopg2
     - `pip install flask sqlalchemy oauth2client`
     - To make the .git directory publicly inaccessible put this in an .htaccess file at the root of the web server: `RedirectMatch 404 /\.git`
 9. Amazon EC2 Instance's public URL: http://ec2-35-165-244-231.us-west-2.compute.amazonaws.com/
-Used this url when configuring Google connect authentication.
+    - Used this url when configuring Google connect authentication.
+    - Installed Munin for monitoring. Accessible from http://ec2-35-165-244-231.us-west-2.compute.amazonaws.com/munin
 
 ## Third-party resources
 
@@ -101,6 +104,7 @@ http://stackoverflow.com/questions/4313323/how-to-change-owner-of-postgresql-dat
 ### Apache
 http://askubuntu.com/questions/14763/where-are-the-apache-and-php-log-files
 http://stackoverflow.com/questions/6142437/make-git-directory-web-inaccessible
+https://www.digitalocean.com/community/tutorials/how-to-install-munin-on-an-ubuntu-vps#step-one%14install-munin
 
 ### Flask Deployment
 http://flask.pocoo.org/docs/0.11/deploying/mod_wsgi/
