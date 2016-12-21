@@ -14,13 +14,15 @@ http://ec2-35-165-244-231.us-west-2.compute.amazonaws.com/catalog/
 
 ## Software Installed
 
-finger
-lynx
-apache2
-postgresql
-git
-python-pip
-python-psycopg2
+- finger
+- lynx
+- apache2
+- postgresql
+- git
+- python-pip
+- python-psycopg2
+- unattended-upgrades
+- munin
 
 ## Configurations made
 
@@ -35,11 +37,10 @@ python-psycopg2
     - `sudo apt-get autoremove`: Remove packages no longer needed
     - `sudo apt-get install unattended-upgrades`: Install auto updates
     - `sudo dpkg-reconfigure --priority=low unattended-upgrades`: Configure auto updates
-3. Configure the local timezone to UTC. No change required. Machine already on UTC+0
-```
-    $date
-    Mon Dec 19 00:36:49 UTC 2016
-```
+3. Configure the local timezone to UTC. No change required. Machine already on UTC+0:
+
+        $date
+        Mon Dec 19 00:36:49 UTC 2016
 4. Install and configure Apache to serve a Python mod_wsgi application
     - `sudo apt-get install apache2`
     - `sudo apt-get install libapache2-mod-wsgi`
